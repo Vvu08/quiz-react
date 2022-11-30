@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+    --card-color: hsl(0, 3%, 99%);
+    --background-color: hsl(4, 0%, 80%);
   }
+
+body {
+    background: var(--background-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+    background: var(--card-color);
+    padding: 3em;
+    min-height: 550px;
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    gap: .5em;
 }
 
-.App-link {
-  color: #61dafb;
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quiz-title {
+    font-size: 3.2em;
+}
+
+.quiz-img {
+    height: auto;
+    max-width: 400px;
+}
+
+.answers {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: .5em;
+    height: 180px;
+    text-align: center;
+}
+
+.answer-card {
+    padding: .5em;
+    width: 10em;
+    border: 1px solid var(--card-color);
+    cursor: pointer;
+}
+
+.answer-card:hover {
+    border: 1px solid #000;
+    transition: all .5s ease-in-out;
+}
+
+.bar {
+    margin: auto;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.bar .progress{
+    background: #000;
+    height:24px;
+    transition: all .5s ease-in-out;
+}
+
+.result-title {
+    text-align: center;
+    font-size: 3.2em;
+}
+
+.result-img {
+    width: 300px;
+    height: auto;
+    margin: auto;
+}
+
+.back-btn {
+    all: unset;
+    display: inline-block;
+    width: 10em;
+    cursor: pointer;
+    border-bottom: 1px solid var(--card-color);
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+}
+
+.back-btn .text {
+    text-align: center;
+}
+
+.back-btn:hover {
+    border-bottom: 1px solid #000;
+    transform: translateX(1rem);
+    transition: all .5s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    .card {
+        heigth: auto;
+        width: auto;
+    }
+    .quiz-title {
+        font-size: 2.5em;
+    }
+    .answers {
+        gap: .5em;
+        height: auto;
+    }
+}
+
+@media (max-width: 630px) {
+    body {
+        height: auto;
+        background: var(--card-color);
+    }
+    .quiz-header {
+        flex-flow: column;
+        height: auto;
+        text-align: center;
+    }
+    .quiz-title {
+        font-size: 2em;
+    }
+    .quiz-img {
+        margin: auto;
+        max-width: 300px;
+    }
 }
