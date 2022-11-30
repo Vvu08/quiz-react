@@ -11,7 +11,7 @@ export default function Quiz ({question, step, onClickVariant}) {
       </div>
       <div className='quiz-header'>
         <h1 className='quiz-title'>{question.title}</h1>
-        <img className='quiz-img' src={window.location.origin + '/images/question'+ step +'.png'} alt='questionImage' />
+        <img className='quiz-img' src={'./images/question'+ step +'.png'} alt='questionImage' />
       </div>
       <div className='answers'>
         {
