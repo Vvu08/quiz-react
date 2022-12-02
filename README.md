@@ -2,8 +2,8 @@
 This is quiz with easy questions.
 ![App Screenshot](https://i.postimg.cc/76B2wqNW/image.png)
 
-## Adaptive design
-![Adaptive Screenshot](https://i.postimg.cc/DZ7r7j38/image.png)
+## Responsive design
+![Responsive Screenshot](https://i.postimg.cc/DZ7r7j38/image.png)
 
 ## 🔗 Technology Stack
 * ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
